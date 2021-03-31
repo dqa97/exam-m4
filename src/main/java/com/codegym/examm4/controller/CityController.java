@@ -42,7 +42,8 @@ public class CityController {
     @PostMapping("/edit")
     public ModelAndView createCity(@ModelAttribute City city){
         cityService.save(city);
-        ModelAndView modelAndView = new ModelAndView("city","message","Tạo Thành Phố Thành Công");
+        ModelAndView modelAndView = new ModelAndView("redirect:/");
+        modelAndView.addObject("message","Sửa Thành Phố Thành Công");
         return modelAndView;
     }
 
