@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Web</title>
+</head>
+<body>
+<a href="/createCountry">Thêm Quốc Gia</a>
+<table border="1px solid black" >
+    <tr>
+        <td>#</td>
+        <td>Quốc Gia</td>
+        <td></td>
+    </tr>
+    <tr th:each="country,something: ${countries}">
+        <td th:text="${something.index +1}"></td>
+        <td><a th:href="@{/view(id=${country.id})}" th:text="${country.name}"></a></td>
+    </tr>
+</table>
+</body>
+</html>

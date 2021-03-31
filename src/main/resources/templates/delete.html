@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Xóa</title>
+</head>
+<body>
+<h2>Xóa thành phố</h2>
+<form method="post">
+    <table>
+        <tr>
+            <td>Bán có chắc muốn xóa</td>
+            <td th:text="${city.name}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" Xóa><a href="/">Thoát</a></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

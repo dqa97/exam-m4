@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Web</title>
+</head>
+<body>
+<a href="/create">Thêm Thành Phố</a>
+<a href="/createCountry">Thêm Quốc Gia</a>
+<table border="1px solid black" >
+    <tr>
+        <td>#</td>
+        <td>Thành Phố</td>
+        <td>Quốc Gia</td>
+        <td></td>
+    </tr>
+    <tr th:each="city,something: ${cityList}">
+        <td th:text="${something.index +1}"></td>
+        <td><a th:href="@{/view(id=${city.id})}" th:text="${city.name}"></a></td>
+        <td th:text="${city.country.name}"></td>
+        <td><a th:href="@{/edit(id=${city.id})}">Chỉnh Sửa</a>|<a th:href="@{/delete(id=${city.id})}">Xóa</a></td>
+    </tr>
+    <a href="/countries">Danh sách Quốc Gia</a>
+</table>
+</body>
+</html>

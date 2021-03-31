@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thành Phố</title>
+</head>
+<body>
+<a href="/">Trở về trang chính</a>
+<fieldset>
+    <legend th:text="${city.name}"></legend>
+    <table>
+        <tr>
+            <td>Tên</td>
+            <td th:text="${city.name}"></td>
+        </tr>
+        <tr>
+            <td>Quốc gia</td>
+            <td th:text="${city.country.name}"></td>
+        </tr>
+        <tr>
+            <td>Diện tích</td>
+            <td th:text="${city.area}"></td>
+        </tr>
+        <tr>
+            <td>Dân số</td>
+            <td th:text="${city.population}"></td>
+        </tr>
+        <tr>
+            <td>GPD</td>
+            <td th:text="${city.GDP}"></td>
+        </tr>
+        <tr>
+            <td>Giới thiệu</td>
+            <td th:text="${city.description}"></td>
+        </tr>
+    </table>
+</fieldset>
+</body>
+</html>
